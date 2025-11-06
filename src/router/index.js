@@ -21,6 +21,11 @@ const routes = [
     // Tạm thời dùng component LibraryBook, bạn sẽ thay thế sau
     component: LibraryBook,
   },
+  {
+path: "/:pathMatch(.*)*",
+name: "notfound",
+component: () => import("@/views/NotFound.vue"),
+},
 ];
 
 const router = createRouter({
